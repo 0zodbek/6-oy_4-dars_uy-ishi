@@ -8,7 +8,6 @@ import Facebook from "./assets/images/facebook.svg"
 import Github from "./assets/images/github.svg"
 
 function App() {
-  const [count, setCount] = useState(0)
   const [formData, setFormData] = useState({
     companyName: '',
     email: '',
@@ -30,7 +29,7 @@ function App() {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      name: value,
+      [name]: value,
     });
   };
 
@@ -38,8 +37,10 @@ function App() {
     e.preventDefault();
     let LS = getLS()
     LS.push(formData)
-    localStorage.setItem("LS",JSON.stringify(LS));
+    localStorage.setItem("LS", JSON.stringify(LS));
   };
+
+  
   return (
     <div className='wrapper'>
      <Header className="header"/>
