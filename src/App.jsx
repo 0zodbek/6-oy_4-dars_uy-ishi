@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
-
+import Earth from "./assets/images/earth.svg"
+import Instagram from "./assets/images/instagram.svg"
+import Telegram from "./assets/images/telegram.svg"
+import Facebook from "./assets/images/facebook.svg"
+import Github from "./assets/images/github.svg"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,7 +30,7 @@ function App() {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+      name: value,
     });
   };
 
@@ -34,7 +38,7 @@ function App() {
     e.preventDefault();
     let LS = getLS()
     LS.push(formData)
-    localStorage.setItem("LS", JSON.stringify(LS));
+    localStorage.setItem("LS",JSON.stringify(LS));
   };
   return (
     <div className='wrapper'>
@@ -87,6 +91,8 @@ function App() {
           >
             <option value="">UZ +9989</option>
             <option value="990976632829">998976632829</option>
+            <option value="998900032829">998900032829</option>
+            <option value="998999092829">998999092829</option>
             {/* Add more options as needed */}
           </select>
         </div>
@@ -94,11 +100,11 @@ function App() {
         <div className="form-group">
           <label>Linklar *</label>
           <div className="links">
-            <button type="button" className="link-button">🌐</button>
-            <button type="button" className="link-button">📷</button>
-            <button type="button" className="link-button">✈️</button>
-            <button type="button" className="link-button">👤</button>
-            <button type="button" className="link-button">🐱</button>
+            <button type="button" className="link-button"><img src={Earth} alt="" /></button>
+            <button type="button" className="link-button"><img src={Instagram} alt="" /></button>
+            <button type="button" className="link-button"><img src={Telegram} alt="" /></button>
+            <button type="button" className="link-button"><img src={Facebook} alt="" /></button>
+            <button type="button" className="link-button"><img src={Github} alt="" /></button>
           </div>
         </div>
 
@@ -112,6 +118,8 @@ function App() {
           >
             <option value="">Davlat</option>
             <option value="O'zbekiston">O'zbekiston</option>
+            <option value="Russia">Russia</option>
+            <option value="America">America</option>
             {/* Add more options as needed */}
           </select>
         </div>
@@ -125,6 +133,8 @@ function App() {
             required
           >
             <option value="">Shahar</option>
+            <option value="Toshkent">Toshkent</option>
+            <option value="Samarqand">Samarqand</option>
             <option value="Angren">Angren</option>
             {/* Add more options as needed */}
           </select>
