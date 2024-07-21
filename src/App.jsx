@@ -20,11 +20,12 @@ function App() {
   });
   function getLS() {
     let infoLS = [];
-    if (localStorage.getItem("infoLS")) {
-      infoLS = JSON.parse(localStorage.getItem("infoLS"));
+    if (localStorage.getItem("LS")) {
+      infoLS = JSON.parse(localStorage.getItem("LS"));
     }
     return infoLS;
   }
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -33,13 +34,13 @@ function App() {
     });
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    let LS = getLS()
-    LS.push(formData)
+    let LS = getLS();
+    LS.push(formData);
     localStorage.setItem("LS", JSON.stringify(LS));
   };
-
   
   return (
     <div className='wrapper'>
@@ -47,7 +48,7 @@ function App() {
      <div className="form-container">
       
       <h1>Kompaniya ma'lumotlari</h1>
-      <p>Kompaniya haqidagi ma'lumotlarni kiriting</p>
+      <p>Kompaniya haqidagi ma'lumotlarni kiriting !</p>
       <form onSubmit={handleSubmit}>
         <div className="avatar-upload">
           <div className="avatar-preview">
@@ -94,7 +95,6 @@ function App() {
             <option value="990976632829">998976632829</option>
             <option value="998900032829">998900032829</option>
             <option value="998999092829">998999092829</option>
-            {/* Add more options as needed */}
           </select>
         </div>
 
@@ -121,7 +121,6 @@ function App() {
             <option value="O'zbekiston">O'zbekiston</option>
             <option value="Russia">Russia</option>
             <option value="America">America</option>
-            {/* Add more options as needed */}
           </select>
         </div>
 
@@ -137,7 +136,6 @@ function App() {
             <option value="Toshkent">Toshkent</option>
             <option value="Samarqand">Samarqand</option>
             <option value="Angren">Angren</option>
-            {/* Add more options as needed */}
           </select>
         </div>
 
