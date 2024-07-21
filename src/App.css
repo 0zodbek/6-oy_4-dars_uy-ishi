@@ -1,0 +1,17 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+/* outline: 4px solid green !important; */
+}
+
+.wrapper{
+width: 1440px;
+height: 1557px;
+background-color: #4F6F52;
+margin: auto;
+}
+
+.header{
+margin: auto;
+}

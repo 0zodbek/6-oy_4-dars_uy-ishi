@@ -1,0 +1,74 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+header{
+width: 1440px;
+height: 80px;
+background-color: #5361E4;
+margin: auto;
+padding: 17px 150px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+header ul {
+display: flex;
+width: 633px;
+justify-content: space-between;
+& li{
+list-style: none;
+& a{
+text-decoration: none;
+color:#fff;
+font-size: 18px;
+font-weight: 500;
+line-height: 22.77px;
+text-align: left;
+}
+}
+}
+.rightpart{
+display: flex;
+gap: 38px;
+& select{
+background-color: transparent;
+border:none;
+color:#fff;
+outline: none;
+font-size: 18px;
+font-weight: 500;
+line-height: 22.77px;
+text-align: left;
+
+}
+& select:hover{
+color:rgb(197, 105, 105);
+}
+& .btn1 {
+width: 113px;
+height: 46px;
+border-radius: 12px;
+background-color: #fff;
+padding: 8px 24px 8px 24px;
+font-size: 16px;
+font-weight: 500;
+line-height: 20.24px;
+text-align: left;
+color:#5361E4;
+border: none;
+transition: transform 0.5s ease;
+}
+& .btn1:hover{
+transform: scale(1.05);
+/* background-color: black; */
+
+}
+}
