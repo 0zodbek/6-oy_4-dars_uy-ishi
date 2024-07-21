@@ -99,7 +99,7 @@ function App() {
         </div>
 
         <div className="form-group">
-          <label>Linklar *</label>
+          <label>Linklar <span>*</span></label>
           <div className="links">
             <button type="button" className="link-button"><img src={Earth} alt="" /></button>
             <button type="button" className="link-button"><img src={Instagram} alt="" /></button>
