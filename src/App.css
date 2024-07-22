@@ -6,17 +6,6 @@ font-family: sans-serif;
 /* outline: 4px solid green !important; */
 }
 
-.wrapper{
-width: 1440px;
-height: 1557px;
-/* background-color: #4F6F52; */
-margin: auto;
-border:0.1px solid grey; 
-}
-
-.header{
-margin: auto;
-}
 body {
   font-family: sans-serif;
   background-color: #f7f7f7;
@@ -25,36 +14,59 @@ body {
   align-items: center;
   /* height: 100vh; */
   margin:0 auto;
-
-  & textarea{
+  & textarea {
   outline: none;
-  }
+  };
   & span{
   color:red;
   }
   
 }
 
+.wrapper{
+width: 1440px;
+height: 1557px;
+margin: auto;
+border:0.1px solid grey; 
+}
+
+.header{
+margin: auto;
+}
+
+
+
 .form-container {
   width: 778px;
-  height: 1271px;
-  padding: 20px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 60px auto;
+  padding-left: 38px;
+  padding-right: 38px;
+  padding-top: 32px;
+}
+
+form{
+width: 702px;
 }
 
 h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #333;
+font-size: 32px;
+font-weight: 500;
+line-height: 41.6px;
+text-align: left;
+color:#2A2941;
+margin-bottom: 16px;
 }
 
 p {
-  font-size: 14px;
-  color: #888;
-  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 450;
+  line-height: 20.8px;
+  text-align: left;
+  color: #B3B3B3;
+  margin-bottom: 32px;
 }
 
 .avatar-upload {
@@ -64,9 +76,9 @@ p {
 }
 
 .avatar-preview {
-  width: 80px;
-  height: 80px;
-  margin-right: 10px;
+  width: 84px;
+  height: 84px;
+  margin-right: 14px;
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid #ddd;
@@ -75,16 +87,16 @@ p {
 .avatar img {
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
 }
 
 .upload-button {
-  background: transparent;
-  color: #007bff;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-  text-decoration: underline;
+font-size: 16px;
+font-weight: 500;
+line-height: 20.24px;
+text-align: left;
+color:#5361E4;
+border:none;
+background-color: transparent;
 }
 
 .form-group {
@@ -92,24 +104,69 @@ p {
 }
 
 label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+font-size: 14px;
+font-weight: 450;
+line-height: 17.71px;
+text-align: left;
+color:#2A2941;
+margin-bottom: 8px;
 }
 
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 10px;
+.first-input{
+margin-bottom: 20px;
+}
+
+input{
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 17.71px;
+  text-align: left;
+  color:#6E6D77;
+  border-radius: 32px;
+}
+
+input,textarea {
+  width: 702px;
+  height: 56px;
+  padding: 18px;
+  padding-left: 18px;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  /* box-sizing: border-box; */
+  border-radius: 16px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 17.71px;
+  text-align: left;
+  color:#6E6D77;
+}
+
+select{
+  height: 56px;
+  padding: 18px;
+  padding-left: 18px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 17.71px;
+  text-align: left;
+  color:#6E6D77;
+}
+
+.tell{
+width: 702px;
+height: 56px;
 }
 
 textarea {
-  height: 100px;
-  /* resize: none; */
+  resize: none;
+  width: 702px;
+  height: 148px;
+  padding: 18px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  margin-bottom: 22px;
 }
 
 .links {
@@ -120,23 +177,31 @@ textarea {
 .link-button {
   background: #f0f0f0;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 12px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
 }
 
 .form-buttons {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 32px;
 }
 
 .back-button,
 .next-button {
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.24px;
+  letter-spacing: 1px;
   cursor: pointer;
-  font-size: 14px;
+  width: 173px;
+  height: 60px;
+  margin-bottom: 32px;
 }
 
 .back-button {
@@ -145,6 +210,19 @@ textarea {
 }
 
 .next-button {
-  background: #007bff;
+  background:#5361E4;
   color: #fff;
+}
+
+.countries {
+display: flex;
+width: 702px;
+justify-content: space-between;
+}
+
+.countries select {
+width: 341px;
+}
+.shahar{
+margin-right: -25.5px;
 }

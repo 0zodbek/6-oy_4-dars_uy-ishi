@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
+import Avatar from "./assets/images/avatar.png"
 import Earth from "./assets/images/earth.svg"
 import Instagram from "./assets/images/instagram.svg"
 import Telegram from "./assets/images/telegram.svg"
@@ -40,6 +41,7 @@ function App() {
     let LS = getLS();
     LS.push(formData);
     localStorage.setItem("LS", JSON.stringify(LS));
+    
   };
   
   return (
@@ -53,15 +55,16 @@ function App() {
         <div className="avatar-upload">
           <div className="avatar-preview">
             <div className="avatar">
-              <img src="default-avatar.png" alt="Avatar" />
+              <img src={Avatar} alt="Avatar" />
             </div>
           </div>
           <button type="button" className="upload-button">Yuklash</button>
         </div>
 
-        <div className="form-group">
+        <div className="form-group"></div>
           <label>Kompaniya nomi <span>*</span></label>
           <input
+          className='first-input'
             type="text"
             name="companyName"
             placeholder="Kompaniya nomi"
@@ -69,7 +72,7 @@ function App() {
             onChange={handleChange}
             required
           />
-        </div>
+        <div/>
 
         <div className="form-group">
           <label>Email <span>*</span></label>
@@ -85,16 +88,17 @@ function App() {
 
         <div className="form-group">
           <label>Telefon raqami <span>*</span></label>
-          <select
+          <select 
+            className='tell'
             name="phone"
             value={formData.phone}
             onChange={handleChange}
             required
           >
             <option value="">UZ +9989</option>
-            <option value="990976632829">998976632829</option>
-            <option value="998900032829">998900032829</option>
-            <option value="998999092829">998999092829</option>
+            <option value="+990976632829">998976632829</option>
+            <option value="+998900032829">998900032829</option>
+            <option value="+998999092829">998999092829</option>
           </select>
         </div>
 
@@ -109,6 +113,7 @@ function App() {
           </div>
         </div>
 
+        <div className="countries">
         <div className="form-group">
           <label>Davlat <span>*</span></label>
           <select
@@ -127,6 +132,7 @@ function App() {
         <div className="form-group">
           <label>Shahar <span>*</span></label>
           <select
+          className='shahar'
             name="city"
             value={formData.city}
             onChange={handleChange}
@@ -137,6 +143,7 @@ function App() {
             <option value="Samarqand">Samarqand</option>
             <option value="Angren">Angren</option>
           </select>
+        </div>
         </div>
 
         <div className="form-group">
@@ -175,7 +182,7 @@ function App() {
         </div>
 
         <div className="form-buttons">
-          <button type="button" className="back-button">Orqaga</button>
+          <button type="button" className="back-button">Ortga</button>
           <button type="submit" className="next-button">Keyingisi</button>
         </div>
       </form>
